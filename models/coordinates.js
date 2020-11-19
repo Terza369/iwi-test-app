@@ -11,8 +11,8 @@ module.exports = class Coordinates {
         const deltaFi = (coordinates.latitude - this.latitude) * Math.PI / 180;
         const deltaLambda = (coordinates.longitude - this.longitude) * Math.PI / 180;
     
-        const halfLegthSquare = Math.sin(deltaFi / 2) * Math.sin(deltaFi / 2) + Math.cos(fi1) * Math.cos(fi2) * Math.sin(deltaLambda / 2) * Math.sin(deltaLambda / 2);
-        const angularDistance = 2 * Math.atan2(Math.sqrt(halfLegthSquare), Math.sqrt(1 - halfLegthSquare));
+        const halfLengthSquare = Math.sin(deltaFi / 2) * Math.sin(deltaFi / 2) + Math.cos(fi1) * Math.cos(fi2) * Math.sin(deltaLambda / 2) * Math.sin(deltaLambda / 2);
+        const angularDistance = 2 * Math.atan2(Math.sqrt(halfLengthSquare), Math.sqrt(1 - halfLengthSquare));
     
         const distance = Math.round(R * angularDistance);
     
