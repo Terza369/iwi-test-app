@@ -13,7 +13,7 @@ exports.getUserMatches = (req, res, next) => {
             let promiseArray = [];
             matches.forEach(match => {
                 const hereEndPoint = 'revgeocode.search.hereapi.com/v1/revgeocode';
-                const hereApiKey = 'OZaiGS_7q8QPvYK9-GNI5i04ip8TkFcRM8UDFnahLAk';
+                const hereApiKey = process.env.HERE_API_KEY;
                 const hereApiUrl = `https://${hereEndPoint}?at=${match.location.coordinates.latitude}%2C${match.location.coordinates.longitude}&lang=en-US&apiKey=${hereApiKey}`;
                 const promise = fetch(hereApiUrl)
                     .then(response => {
