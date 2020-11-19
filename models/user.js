@@ -39,6 +39,7 @@ module.exports = class User {
                 users.forEach(user => {
                     let distance = user.location.coordinates.calculateDistance(sourceCoordinates);
                     if(distance < radius) {
+                        user.location.distance = distance + 'm';
                         matches.push(user);
                     }
                 });
