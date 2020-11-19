@@ -2,8 +2,11 @@ This is a geolocation test API for Iwi mobile app. It is built using Node.js, Ex
 
 API and database are hosted by Heroku.
 
+### API test example:
+- `https://iwi-test-app.herokuapp.com/user/matches?latitude=45.813060&longitude=15.977513&radius=200`
+
 ### How to install:
 - run `npm install`
 
 ### How to run:
-- run `npm start` to run it with Nodemon or `node app.js` for a regular run
+- run `node app.js`
