@@ -1,4 +1,4 @@
-This is a geolocation test API for Iwi mobile app. It is built using Node.js, Express, MySQL and Here third party geolocation services API.
+This is a geolocation test API for Iwi mobile app. It was built using Node.js, Express, MySQL and Here geolocation services API.
 
 API and database are hosted by Heroku.
 
