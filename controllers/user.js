@@ -16,11 +16,8 @@ exports.getUserMatches = (req, res, next) => {
                 const hereApiKey = process.env.HERE_API_KEY;
                 const hereApiUrl = `https://${hereEndPoint}?at=${match.location.coordinates.latitude}%2C${match.location.coordinates.longitude}&lang=en-US&apiKey=${hereApiKey}`;
                 const promise = fetch(hereApiUrl)
-                    .then(response => {
-                        return response.json()
-                    })
                     .then(result => {
-                        match.location.address = result.items[0].address.label;
+                        match.location.address = result.json().items[0].address.label;
                         return match;
                     })
                     .catch(err => console.log(err));
